@@ -13,7 +13,8 @@ class datetime(basedatetime.datetime):
     def now(cls, tzinfo=None):
         now = cls._timezone(tzinfo).normalize(pytz.utc.localize(cls.utcnow()))
         if hasattr(settings, 'DJANGO_SETTINGS_TIMEDELTA'):
-            if isinstance(settings.DJANGO_SETTINGS_TIMEDELTA, basedatetime.timedelta):
+            if isinstance(settings.DJANGO_SETTINGS_TIMEDELTA,
+                          basedatetime.timedelta):
                 return now + settings.DJANGO_SETTINGS_TIMEDELTA
         return now
 

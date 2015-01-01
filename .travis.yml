@@ -10,4 +10,4 @@ install:
   - pip install pytest --use-mirrors
   - pip install pytz --use-mirros
 script:
-  - pep8 --repeat --show-source --exclude=.venv,.tox,dist,doc,build,*.egg .
+  - pep8 --repeat --show-source --exclude=.venv,.tox,dist,doc,build,*.egg,*.yml .
