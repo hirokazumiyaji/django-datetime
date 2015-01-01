@@ -1,0 +1,13 @@
+language: python
+python:
+  - "2.7"
+  - "3.4"
+  - "pypy"
+install:
+  - pip install -e . --use-mirrors
+  - pip install Django --use-mirrors
+  - pip install pep8 --use-mirros
+  - pip install pytest --use-mirrors
+  - pip install pytz --use-mirros
+script:
+  - pep8 --repeat --show-source --exclude=.venv,.tox,dist,doc,build,*.egg .
